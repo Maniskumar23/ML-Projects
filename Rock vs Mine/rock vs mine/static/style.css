@@ -1,0 +1,59 @@
+/* static/style.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #043e3f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #d66161;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(243, 241, 241, 0.749);
+    text-align: center;
+}
+
+#rock-image {
+    width: 500px;
+    height: auto;
+    
+    border-radius: 10px;
+   
+}
+
+#heading {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #02b3bd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}

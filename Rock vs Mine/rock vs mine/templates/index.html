@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock vs Mine Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='rock.png') }}" alt="Sonar Image" id="rock-image">
+        <h1 id="heading">Sonar Prediction</h1>
+        <form action="/predict" method="post">
+            <input type="text" name="data" placeholder="Enter sonar data" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

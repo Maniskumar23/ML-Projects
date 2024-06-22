@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='news.jpg') }}" alt="newsimage" id="news-image">
+    <h1>Fake News Detection</h1>
+    <form method="POST" action="/submit">
+        
+        <textarea name="input_text" rows="10" cols="50" placeholder="Enter news content here..."></textarea>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
